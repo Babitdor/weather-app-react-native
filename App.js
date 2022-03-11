@@ -3,9 +3,10 @@ import Date_time from './components/date_time';
 import Weather_scroll from './components/weather_scroll';
 import React,{useEffect,useState} from 'react';
 import {font} from 'expo'
+import Expandedview from './components/expandedview';
 
 const API_KEY = 'd69ab37f921ef3e010611120b6b05e02';
-const img = require('./assets/Rainy.jpg')
+const img = require('./assets/background.jpg')
 export default function App() {
 
   const[data, setData]=useState({});  
@@ -35,8 +36,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ImageBackground source={img} style={styles.image} blurRadius={2}>
-        <Date_time current={data.current} lat={data.lat} lon={data.lon} time_zone={data.timezone} visibility={data.visibility} wind={data.wind}/>
-        <Weather_scroll weatherData={data.daily}/>
+        {/* <Expandedview current={data.current} lat={data.lat} lon={data.lon} time_zone={data.timezone} visibility={data.visibility} wind={data.wind}/> */}
+        <Date_time current={data.current} lat={data.lat} lon={data.lon} time_zone={data.timezone} visibility={data.visibility} wind={data.wind}/> 
+        <Weather_scroll weatherData={data.daily}/> 
       </ImageBackground>
       
     </View>
