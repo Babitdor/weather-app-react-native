@@ -11,3 +11,7 @@ Weather Forecast App using React Native and Expo along with OpenWeatherMap API
 - Beautiful layout to make it modern similar to Google material design.
 - Swipe and transistion animations
 - Display forecast based on Searched Location.
+
+
+
+![Screenshot (105)](https://user-images.githubusercontent.com/57758789/163712988-447f4d94-7ef3-42bb-bf20-70896d52bfce.png)
