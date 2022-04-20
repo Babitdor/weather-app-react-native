@@ -1,5 +1,6 @@
-Weather Forecast App using React Native and Expo along with OpenWeatherMap API
+# Weather Forecast App 
 
+- Built using React Native and Expo along with OpenWeatherMap API
 - This app will allows users to check the forecast of any searched location, it will display a smooth transition depending on the temperature of the location.
 
 - Currently in Beta:
@@ -13,5 +14,5 @@ Weather Forecast App using React Native and Expo along with OpenWeatherMap API
 - Display forecast based on Searched Location.
 
 
-
+# Screenshot
 ![Screenshot (105)](https://user-images.githubusercontent.com/57758789/163712988-447f4d94-7ef3-42bb-bf20-70896d52bfce.png)
