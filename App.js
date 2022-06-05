@@ -1,19 +1,21 @@
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
-import Date_time from './components/date_time';
-import Weather_scroll from './components/weather_scroll';
+import { StatusBar } from 'expo-status-bar';
 import React,{useEffect,useState} from 'react';
-import {font} from 'expo'
-import Expandedview from './components/expandedview';
+import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground } from 'react-native-web';
+import Img from './components/assets/Image2.jpg'
+import Bottom from './components/Bottom';
+
+import Top from './components/Top';
 
 const API_KEY = 'd69ab37f921ef3e010611120b6b05e02';
-const img = require('./assets/background.jpg')
+
 export default function App() {
 
   const[data, setData]=useState({});  
 
   useEffect(()=>{
     navigator.geolocation.getCurrentPosition((success)=>{
-
+     
       let{latitude,longitude} = success.coords;
       FetchDataFromApi(latitude,longitude)
       
@@ -25,37 +27,31 @@ export default function App() {
   },[])
 
   const FetchDataFromApi = (latitude,longitude) => {
-      fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(response=>response.json()).then(data => {
-      console.log(data)
-      setData(data)
-    })
+    fetch(`http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY}`).then(response=>response.json()).then(data => {
+    console.log(data)
+    setData(data)
+  })
 
-  }
-
+}
 
   return (
+    <ImageBackground source={Img} style={styles.image} blurRadius={3}>
     <View style={styles.container}>
-      <ImageBackground source={img} style={styles.image} blurRadius={2}>
-        {/* <Expandedview current={data.current} lat={data.lat} lon={data.lon} time_zone={data.timezone} visibility={data.visibility} wind={data.wind}/> */}
-        <Date_time current={data.current} lat={data.lat} lon={data.lon} time_zone={data.timezone} visibility={data.visibility} wind={data.wind}/> 
-        <Weather_scroll weatherData={data.daily}/> 
-      </ImageBackground>
-      
+      <Top current={data.current} data={data.daily}/>
+      <Bottom style={{flex:3}} weather={data.current}/>
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  
   container: {
     flex: 1,
+    // backgroundColor: '#fff',
   },
   image: {
     flex: 1,
     resizeMode: "cover",
     justifyContent: 'center',
   }
-
 });
-
-

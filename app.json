@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "weather-app-react-native",
-    "slug": "weather-app-react-native",
+    "name": "weather-app",
+    "slug": "weather-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
