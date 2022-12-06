@@ -14,5 +14,5 @@
 - Display forecast based on Searched Location.
 
 
-# Screenshot
-![Screenshot (105)](https://user-images.githubusercontent.com/57758789/163712988-447f4d94-7ef3-42bb-bf20-70896d52bfce.png)
+## Screenshot
+<img src="https://user-images.githubusercontent.com/57758789/205996654-99ac2909-dd21-414f-8883-66593bea349d.png" width="300" height="600" />
