@@ -15,4 +15,4 @@
 
 
 ## Screenshot
-<img src="https://user-images.githubusercontent.com/57758789/205996654-99ac2909-dd21-414f-8883-66593bea349d.png" width="300" height="600" />
+<img src="https://user-images.githubusercontent.com/57758789/205997265-d8f46be2-c509-4a1d-a7fb-56a580b89c81.png" width="300" height="600" />
