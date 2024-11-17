@@ -31,8 +31,6 @@ This **Weather App** is a mobile application built with **React Native** that pr
    ```bash
    npm start
 
-
-
 ## Screenshot
 <div style={{align:center}}>
 <img src="https://user-images.githubusercontent.com/57758789/206276301-2328bf8b-becf-4dc8-b5d0-9afae8329cee.png" width="300" height="600" />
